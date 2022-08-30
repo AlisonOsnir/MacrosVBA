@@ -1,0 +1,11 @@
+1 - Abrir a planilha que deseja utilizar macro
+2 - Pressionar Alt+F11 (Editor visual basic na guia desenvolvedor)
+3 - Clicar em arquivo --> importar arquivo
+4 - Selecionar a macro ( .bas)
+5 - Atualizar corretamente a area de manutenção de codigo
+6 - Salvar planilha como planilha habilitada para macros
+
+Pronto!Já podera utilizar a macro!
+
+Se a procura(procv) do relatório e a manutenção do codigo estiver correto, 
+basta ir no banco de dados, selecionar o serial e pressionar Ctrl+r.
