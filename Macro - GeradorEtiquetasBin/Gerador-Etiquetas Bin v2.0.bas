@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo1"
+Attribute VB_Name = "MÃ³dulo1"
 Sub ImprimeEtiquetasBin()
 Attribute ImprimeEtiquetasBin.VB_Description = "Imprime as etiquetas de bin"
 Attribute ImprimeEtiquetasBin.VB_ProcData.VB_Invoke_Func = "P\n14"
@@ -15,7 +15,7 @@ Dim valida_second_page As Boolean
 Dim copy_first_page_data As Range
 
 Set first_page_data = Range("B5:I24")
-Set second_page_data = Range("B25:I45")
+Set second_page_data = Range("B25:I44")
 Set copy_first_page_data = Range("BB5:BI24")
 
     Sheets("ETIQ. BIN").Select
@@ -34,6 +34,8 @@ Next
 
 If valida_second_page Then
     
+    copy_first_page_data.Clear
+                            
     first_page_data.Select
     Selection.Copy
     copy_first_page_data.Select
