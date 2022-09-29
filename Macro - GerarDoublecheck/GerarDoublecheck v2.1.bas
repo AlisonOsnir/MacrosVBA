@@ -20,11 +20,11 @@ Set second_page_data = Range("B52:G95")
 Set copy_first_page_data = Range("BB8:BG51")
 
     Sheets("DOUBLECHECK").Select
-'    ActiveWindow.SelectedSheets.PrintOut Copies:=1, Collate:=True, _
+    ActiveWindow.SelectedSheets.PrintOut Copies:=1, Collate:=True, _
         IgnorePrintAreas:=False
     Sheets("PREENCHER").Select
     
-For Each C In second_page_data
+For Each C In Range("B52:B95") 'second_page first column
     If C.Value <> "" Then
         valida_second_page = True
         Exit For
@@ -34,6 +34,8 @@ Next
 
 If valida_second_page Then
     
+    copy_first_page_data.Clear
+                        
     first_page_data.Select
     Selection.Copy
     copy_first_page_data.Select
@@ -46,7 +48,7 @@ If valida_second_page Then
     ActiveSheet.Paste
     
     Sheets("DOUBLECHECK").Select
-'   ActiveWindow.SelectedSheets.PrintOut Copies:=1, Collate:=True, _
+   ActiveWindow.SelectedSheets.PrintOut Copies:=1, Collate:=True, _
         IgnorePrintAreas:=False
     Sheets("PREENCHER").Select
     
