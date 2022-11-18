@@ -73,6 +73,11 @@ Attribute createSheetDialogs.VB_ProcData.VB_Invoke_Func = " \n14"
 
         Application.ScreenUpdating = False
         
+        Union(Columns(CInt(ColX)), Columns(CInt(ColY))).Select
+        Selection.Replace What:="mm", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False, FormulaVersion:=xlReplaceFormula2
+        
     'FORMAT CRYSTAL SHEET
         
         ExcelSheet1.Activate
